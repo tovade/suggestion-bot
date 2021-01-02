@@ -48,6 +48,8 @@ module.exports = {
             .setDescription(suggestion)
             .setFooter(`token: ${token}`);
           const random = await channel.send(embed);
+          random.react("👍");
+          random.react("👎");
           message.channel.send(`Done suggestion has been send to ${channel}!`);
           const sug = new suggestionModel({
             token: token,
